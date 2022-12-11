@@ -1,0 +1,22 @@
+#Migration metadata
+id: migration_city
+label: Migrate list of city
+migration_group: custom_migrate_city
+
+source:
+  plugin: custom_migration_city
+
+destination:
+  plugin: entity:migrate_city
+
+process:
+  id: _id
+  city: city
+  longtitude: loc
+  latitude: loc
+  pop: pop
+  state: state
+
+migration_dependecies:
+  required: {}
+dependencies: {}
